@@ -3,7 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # You can view the app on Netlify
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1b1b4e7c-e124-4ebc-b6dc-a86adcc8fd0b/deploy-status)](https://app.netlify.com/sites/priceless-bartik-8fa45a/deploys)
+
+https://priceless-bartik-8fa45a.netlify.app/
 
 ## Available Scripts
 
