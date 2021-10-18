@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# You can view the app on Netlify
+
+https://priceless-bartik-8fa45a.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
