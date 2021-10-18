@@ -10,7 +10,7 @@ function App() {
 
   const handleInput = (event: any, type: string) => {
     const { value } = event.target;
-    console.log(value)
+    console.log(value);
     if (type === 'name') {
       setName(value)
     } else if (type === 'email') {
@@ -35,34 +35,64 @@ function App() {
   }
 
   return (
-    <div className="contact-us">
-      <div className="title">
-        <h1>We value your feedback</h1>
-      </div>
-      <div className="form">
-        <div className="form-items">
-          <input type="text" className="input" placeholder="Name" value={name} onChange={(e) => handleInput(e, 'name')} />
-          <i className="fas fa-user"></i>
+    <div>
+      <Header />
+      <div className="contact-us">
+        <div className="title">
+          <h1>We value your feedback</h1>
         </div>
-        <div className="form-items">
-          <input type="text" className="input" placeholder="Email" value={email} onChange={(e) => handleInput(e, 'email')} />
-          <i className="fas fa-envelope"></i>
+        <div className="form">
+          <div className="form-items">
+            <input type="text" className="input" placeholder="Name" value={name} onChange={(e) => handleInput(e, 'name')} />
+            <i className="fas fa-user"></i>
+          </div>
+          <div className="form-items">
+            <input type="text" className="input" placeholder="Email" value={email} onChange={(e) => handleInput(e, 'email')} />
+            <i className="fas fa-envelope"></i>
+          </div>
+          <div className="form-items">
+            <textarea
+              className="input message" cols={30} rows={10}
+              placeholder="Message....."
+              value={message}
+              onChange={(e) => handleInput(e, 'message')}
+            ></textarea>
+          </div>
         </div>
-        <div className="form-items">
-          <textarea
-            className="input message" cols={30} rows={10}
-            placeholder="Message....."
-            value={message}
-            onChange={(e) => handleInput(e, 'message')}
-          ></textarea>
+        <div className="btn" onClick={handleSubmit}>
+          Submit
+          <i className="fas fa-arrow-right"></i>
         </div>
       </div>
-      <div className="btn" onClick={handleSubmit}>
-        Submit
-        <i className="fas fa-arrow-right"></i>
-      </div>
-    </div>
+      <Footer />
+    </div >
   );
 }
 
 export default App;
+
+
+const Header = () => {
+  return (
+    <div className='header'>
+      <span className='header-logo-container'>
+        <img
+          className='header-logo'
+          src={
+            require("../assets/images/logo.svg")
+              .default
+          }
+          alt="logo"
+        />
+      </span>
+    </div>
+  );
+}
+
+const Footer = () => {
+  return (
+    <footer>
+      <p>Copyright @ Rapid Innovation Rights Reserved</p>
+    </footer>
+  )
+}
